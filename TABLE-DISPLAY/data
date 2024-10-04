@@ -1,0 +1,27 @@
+[
+    {
+        id : 1,
+        name : "ashish",
+        subject : "react",
+        city : "rajkot",
+    },
+    {
+        id : 2,
+        name : "raj",
+        subject : "javascript",
+        city : "Ahemdabad",
+    },
+    {
+        id : 3,
+        name : "vivek",
+        subject : "nodejs",
+        city : "rajkot",
+    },
+    {
+        id : 4,
+        name : "shyam",
+        subject : "bootstrap",
+        city : "rajkot",
+    }
+    
+]

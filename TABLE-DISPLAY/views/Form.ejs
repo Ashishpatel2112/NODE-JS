@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; display: flex; flex-direction: column;">
+    <h2>DISPLAY TABLE:</h2>
+    <table border="1" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>NAME</th>
+                <th>SUBJECT</th>
+                <th>CITY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.map((e,i) => { %>
+                <tr>
+                    <td><%= e.id %></td>
+                    <td><%= e.name %></td>
+                    <td><%= e.subject %></td>
+                    <td><%= e.city %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
