@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin :0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.header{
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+}
+</style>
+<body style="text-align: center;">
+
+    <div class="header">
+
+    </div>
+    <h1 style="margin-block: 15px;">EDIT STUDENT DATA</h1>
+    <form action="/update" method="post" style="margin-bottom: 20px; font-size:20px;">
+        
+        <input type="text" value="<%= stud.id%>" hidden name="id">
+        
+        <label for=""  style="color: grey;" >Student Name : </label>
+        <input type="text" style="border-radius: 100px; text-align: center; font-weight: 800;" value="<%= stud.name%>" placeholder="Student name" name="name"/><br> <br>
+        
+        <label for="" style="color: grey;" >Student Age :</label>
+        <input type="number" style="border-radius: 100px; text-align: center; font-weight: 800;" value="<%= stud.age%>" placeholder="Student age" name="age"/><br> <br>
+
+        <label for="" style="color: grey;" >Student Address : </label>
+        <input type="text" style="border-radius: 100px; text-align: center; font-weight: 800;" value="<%= stud.address%>" placeholder="Student address" name="address"/><br> <br>
+
+
+        <button style="height: 30px; width: 80px; border-radius: 50px; font-weight: bolder; ">UPDATE</button>
+
+    </form>
+
+   
+</body>
+</html>
