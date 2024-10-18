@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>UPDATE DATA</h1>
+    
+    <form action="/edit" method="post">
+
+         <input type="text" hidden value="<%= editeddata.id %>" name="id">
+
+        <label>Name:</label>
+        <input type="text" value="<%= editeddata.name %>"  name="name" required>
+
+        <label >Age:</label>
+        <input type="number" value="<%= editeddata.age %>"  name="age" min="0" required>
+
+        <label>Email:</label>
+        <input type="email" value="<%= editeddata.email %>"  name="email" required>
+
+       <a href="/updatedata"><button type="submit">UPDATE</button></a> 
+    </form>
+
+  
+</body>
+</html>

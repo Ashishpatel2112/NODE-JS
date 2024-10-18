@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>ADD DATA</h1>
+    
+    <form action="/insert" method="post">
+        <label>Name:</label>
+        <input type="text"  name="name" required>
+
+        <label >Age:</label>
+        <input type="number"  name="age" min="0" required>
+
+        <label>Email:</label>
+        <input type="email"  name="email" required>
+
+       <a href="/add"><button type="submit">ADD</button></a> 
+    </form>
+
+    <table border="2" style="width: 50%; margin: 15px; text-align: center;">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>age</td>
+                <td>email</td>
+                <td colspan="2">Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.map((e,i)=>{%>
+                <tr>
+                    <td><%=e.name%></td>
+                    <td><%=e.age%></td>
+                    <td><%=e.email%></td>
+                    <td>
+                        <a href="/editdata?id=<%=e.id%>"><button>EDIT</button></a>
+                        <a href="/deletedata?id=<%=e.id%>"><button>DELETE</button></a>
+                    </td>
+                </tr>
+            <%})%>
+        </tbody>
+    </table>
+</body>
+</html>
