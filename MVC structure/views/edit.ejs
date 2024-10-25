@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body style="text-align: center;">
+    <h1>Edit User</h1>
+    <form  action="/update" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="id" value="<%= user._id %>">
+        <input type="text" placeholder="Enter your name" name="name" value="<%= user.name %>">
+        <input type="text" placeholder="Enter your subject" name="sub" value="<%= user.sub %>"> <br><br>
+        <label>Male</label>
+        <input type="radio" name="gender" value="man" <%= user.gender === 'male' ? 'checked' : '' %>>
+        <label>Female</label>
+        <input type="radio" name="gender" value="woman" <%= user.gender === 'Female' ? 'checked' : '' %>>
+        <br><br>
+        <label>Playing</label>
+        <input type="checkbox" name="hobby" value="game" <%= user.hobby.includes('Playing') ? 'checked' : '' %>>
+        <label>Singing</label>
+        <input type="checkbox" name="hobby" value="singing" <%= user.hobby.includes('singing') ? 'checked' : '' %>>
+        <label>Traveling</label>
+        <input type="checkbox" name="hobby" value="traveling" <%= user.hobby.includes('traveling') ? 'checked' : '' %>> <br><br>
+        <select name="city">
+            <option value="rajkot" <%= user.city === 'rajkot' ? 'selected' : '' %>>Rajkot</option>
+            <option value="jamnagar" <%= user.city === 'jamnagar' ? 'selected' : '' %>>Jamnagar</option>
+            <option value="abu" <%= user.city === 'abu' ? 'selected' : '' %>>Abu</option>
+            <option value="surat" <%= user.city === 'surat' ? 'selected' : '' %>>Surat</option>
+        </select><br><br>
+        <input type="file" name="image"> <br><br>
+       
+            <img src="<%= user.image %>" alt="Current Image" width="100">
+            <input type="hidden" name="currentImage" value="<%= user.image %>">
+         <br><br>
+        <button type="submit">Update</button>
+
+    </form>
+</body>
+</html>
