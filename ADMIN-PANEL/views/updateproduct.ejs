@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> ADMIN </title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="/public/assets/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts and icons -->
+    <script src="/public/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["/public/assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="/public/assets/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="/public/assets/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+  <%-include('aside')%>
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+         
+          </div>
+          <!-- Navbar Header -->
+         <%-include('header')%>
+          <!-- End Navbar -->
+        </div>
+
+        <div class="container">
+          <div class="page-inner">
+            <div class="page-header">
+              <h3 class="fw-bold mb-3"> Product </h3>
+             
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <form action="/addproducts" enctype="multipart/form-data" method="post"  >
+                  <div class="card-header">
+                    <div class="card-title">Add Product </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12 col-lg-4">
+                       
+                      
+
+                          <div class="form-floating form-floating-custom mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                              name="productname"
+                              value="<%=data.productname%>"
+                              required
+                            />
+                            <label for="floatingInput">Product Name</label>
+                          </div>
+                          <div class="form-floating form-floating-custom mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                              name="productinfo"
+                              value="<%=data.productinfo%>"
+                              required
+                            />
+                            <label for="floatingInput">Product Discription</label>
+                          </div>
+                          <div class="form-floating form-floating-custom mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                              name="productprice"
+                              value="<%=data.productprice%>"
+                              required
+                            />
+                            <label for="floatingInput">Product Price</label>
+                          </div>
+                          
+                           <div class="form-floating form-floating-custom mb-3">
+                            <input
+                              type="file"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                              name="productimage"
+                              value="<%=data.productimage%>"
+                            />
+                            <label for="floatingInput">Product Image</label>
+                          </div>
+
+                          <img src="<%=data.productimage%>" height="100px" width="100px" alt="">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <!-- <button type="submit" class="btn btn-danger">Cancel</button> -->
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <%-include('footer')%>
+
+      </div>
+
+      
+    </div>
+    <!--   Core JS Files   -->
+    <script src="/public/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="/public/assets/js/core/popper.min.js"></script>
+    <script src="/public/assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="/public/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="/public/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="/public/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="/public/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="/public/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="/public/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="/public/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="/public/assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Google Maps Plugin -->
+    <script src="/public/assets/js/plugin/gmaps/gmaps.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="/public/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="/public/assets/js/kaiadmin.min.js"></script>
+
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="/public/assets/js/setting-demo2.js"></script>
+  </body>
+</html>
